@@ -1,14 +1,15 @@
 import "../styles/home.css";
+import { Link } from "react-router-dom";
 import GenshinLogo from "../assets/GenshinLogo.png";
 
-function Home() {
+export default function Home() {
   return (
     <div className="home">
       <h1>welcome to everything genshin</h1>
       <img src={GenshinLogo} alt="logo" />
-      <button>Explore</button>
+      <Link to="/menu">
+        <button>Explore</button>
+      </Link>
     </div>
   );
 }
-
-export default Home;
