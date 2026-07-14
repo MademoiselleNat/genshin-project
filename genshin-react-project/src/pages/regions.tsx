@@ -6,7 +6,7 @@ export default function RegionList() {
     <div>
       {regions.map((region) => (
         <div key={region.id}>
-          <h1>{region.id}</h1>
+          <h1>{region.name}</h1>
           <p>{region.info}</p>
           <Link to={`/regions/${region.id}`}>
             <button>Read more</button>

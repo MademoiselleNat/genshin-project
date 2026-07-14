@@ -12,7 +12,7 @@ export default function regionDetails() {
 
   return (
     <div>
-      <h1>{region.id}</h1>
+      <h1>{region.name}</h1>
       <h1>Archon</h1>
       <p>{region.archon}</p>
       <h1>Geography</h1>
