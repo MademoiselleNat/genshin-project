@@ -9,7 +9,9 @@ function Menu() {
       <Link to="/regions">
         <h1>Regions</h1>
       </Link>
-      <h1>Materials</h1>
+      <Link to="/mats">
+        <h1>Materials</h1>
+      </Link>
       <h1>Weekly bosses</h1>
     </div>
   );

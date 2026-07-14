@@ -3,7 +3,7 @@ type Material = {
     name: string,
     regions: string[] ,
     source?: string,
-    category: "local specialty" | "common" | "boss drop"
+    category: "Local specialty" | "Common" | "Boss drop"
 };
 
 export const materials: Material[] = [
@@ -11,13 +11,21 @@ export const materials: Material[] = [
         id: "sweet-flower",
         name: "Sweet flower",
         regions: ["Mondstadt", "Liyue"],
-        category: "common"
+        category: "Common"
     },
 
     {
         id: "qingxin",
         name: "Qingxin",
         regions: ["Liyue"],
-        category: "local specialty"
+        category: "Local specialty"
+    },
+
+    {
+        id: "hydro-gem",
+        name: "Hydro gem",
+        regions: ["Liyue"],
+        category: "Boss drop",
+        source: "Oceanid"
     }
 ]

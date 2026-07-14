@@ -1,4 +1,5 @@
 import { regions } from "../data/regions";
+import { materials } from "../data/materials";
 import { useParams } from "react-router-dom";
 
 export default function regionDetails() {
@@ -10,6 +11,10 @@ export default function regionDetails() {
     <h1>No such region in genshin bruh</h1>;
   }
 
+  const regionMaterials = materials.filter((mat) =>
+    mat.regions.includes(region.name),
+  );
+
   return (
     <div>
       <h1>{region.name}</h1>
@@ -19,6 +24,12 @@ export default function regionDetails() {
       <p>{region.geography}</p>
       <h1>Cuisine</h1>
       <p>{region.cuisine}</p>
+      <h1>Materials</h1>
+      <p>
+        {regionMaterials.map((mat) => (
+          <span key={mat.id}>{mat.name} </span>
+        ))}
+      </p>
     </div>
   );
 }
