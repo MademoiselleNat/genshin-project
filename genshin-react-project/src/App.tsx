@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import Menu from "./pages/menu";
 import CharacterList from "./pages/characters";
 import RegionList from "./pages/regions";
+import RegionDetails from "./pages/regionDetails";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/characters" element={<CharacterList />} />
         <Route path="/regions" element={<RegionList />} />
+        <Route path="/regions/:id" element={<RegionDetails />}></Route>
       </Routes>
     </BrowserRouter>
   );

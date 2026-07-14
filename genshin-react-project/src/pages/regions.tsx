@@ -1,4 +1,5 @@
 import { regions } from "../data/regions";
+import { Link } from "react-router-dom";
 
 export default function RegionList() {
   return (
@@ -7,7 +8,9 @@ export default function RegionList() {
         <div key={region.id}>
           <h1>{region.id}</h1>
           <p>{region.info}</p>
-          <button>Read more</button>
+          <Link to={`/regions/${region.id}`}>
+            <button>Read more</button>
+          </Link>
         </div>
       ))}
     </div>
