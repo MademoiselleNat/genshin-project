@@ -12,7 +12,9 @@ function Menu() {
       <Link to="/mats">
         <h1>Materials</h1>
       </Link>
-      <h1>Weekly bosses</h1>
+      <Link to="/bosses">
+        <h1>Bosses</h1>
+      </Link>
     </div>
   );
 }

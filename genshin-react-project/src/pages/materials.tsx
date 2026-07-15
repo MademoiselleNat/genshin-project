@@ -12,7 +12,11 @@ export default function MaterialList() {
             ))}
           </p>
           <p>{mat.category}</p>
-          <p>{mat.source}</p>
+          <p>
+            {mat.source?.map((src) => (
+              <span key={src}>{src} </span>
+            ))}
+          </p>
         </div>
       ))}
     </div>

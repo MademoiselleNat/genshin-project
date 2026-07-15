@@ -2,7 +2,7 @@ type Material = {
     id: string,
     name: string,
     regions: string[] ,
-    source?: string,
+    source?: string[],
     category: "Local specialty" | "Common" | "Boss drop"
 };
 
@@ -26,6 +26,21 @@ export const materials: Material[] = [
         name: "Hydro gem",
         regions: ["Liyue"],
         category: "Boss drop",
-        source: "Oceanid"
+        source: ["Oceanid", "Tartaglia"]
+    },
+
+    {
+        id: "sakura-bloom",
+        name: "Sakura bloom",
+        regions: ["Inazuma"],
+        category: "Local specialty"
+    }, 
+
+    {
+        id: "electro-gem",
+        name: "Electro gem",
+        regions: ["Mondstadt", "Inazuma"],
+        category: "Boss drop",
+        source: ["Electro hypostasis", "Raiden Shogun"]
     }
 ]
