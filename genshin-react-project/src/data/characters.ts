@@ -25,6 +25,26 @@ export const characters: Character[] = [
         region: "Nod Krai",
         element: "Electro",
         weapon: "Polearm"
+    },
 
+    {
+        name: "Kaeya",
+        region: "Mondstadt",
+        element: "Cryo",
+        weapon: "Sword"
+    },
+
+    {
+        name: "Hu Tao",
+        region: "Liyue",
+        element: "Pyro",
+        weapon: "Polearm"
+    },
+
+    {
+        name: "Zhongli",
+        region: "Liyue",
+        element: "Geo",
+        weapon: "Polearm"
     }
 ]
