@@ -1,4 +1,5 @@
 type Character = {
+    id: string,
     name: string,
     region: string,
     element: string,
@@ -7,6 +8,7 @@ type Character = {
 
 export const characters: Character[] = [
     {
+        id: "xiao",
         name: "Xiao",
         region: "Liyue",
         element: "Anemo",
@@ -14,6 +16,7 @@ export const characters: Character[] = [
     },
 
     {
+        id: "neuvi",
         name: "Neuvillette",
         region: "Fontaine",
         element: "Hydro",
@@ -21,6 +24,7 @@ export const characters: Character[] = [
     },
 
     {
+        id: "flins",
         name: "Flins",
         region: "Nod Krai",
         element: "Electro",
@@ -28,6 +32,7 @@ export const characters: Character[] = [
     },
 
     {
+        id: "kaeya",
         name: "Kaeya",
         region: "Mondstadt",
         element: "Cryo",
@@ -35,6 +40,7 @@ export const characters: Character[] = [
     },
 
     {
+        id: "hu-tao",
         name: "Hu Tao",
         region: "Liyue",
         element: "Pyro",
@@ -42,6 +48,7 @@ export const characters: Character[] = [
     },
 
     {
+        id: "zhongli",
         name: "Zhongli",
         region: "Liyue",
         element: "Geo",

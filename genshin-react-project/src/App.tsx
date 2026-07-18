@@ -6,6 +6,8 @@ import RegionList from "./pages/regions";
 import RegionDetails from "./pages/regionDetails";
 import MaterialList from "./pages/materials";
 import Bosses from "./pages/bosses";
+import CharacterDetails from "./pages/characterDetails";
+import BossDetails from "./pages/bossDetails";
 
 function App() {
   return (
@@ -14,10 +16,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/characters" element={<CharacterList />} />
+        <Route path="/characters/:id" element={<CharacterDetails />}></Route>
         <Route path="/regions" element={<RegionList />} />
         <Route path="/regions/:id" element={<RegionDetails />} />
         <Route path="/mats" element={<MaterialList />} />
         <Route path="/bosses" element={<Bosses />} />
+        <Route path="/bosses/:id" element={<BossDetails />}></Route>
       </Routes>
     </BrowserRouter>
   );

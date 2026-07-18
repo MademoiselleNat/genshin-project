@@ -2,6 +2,7 @@ import { bosses } from "../data/bosses";
 import { materials } from "../data/materials";
 import { useState } from "react";
 import FilterGroup from "../components/filtering";
+import { Link } from "react-router-dom";
 
 export default function Bosses() {
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
@@ -27,25 +28,27 @@ export default function Bosses() {
         </div>
       )}
       {filteredBosses.map((boss) => (
-        <div key={boss.id}>
-          <h1>{boss.name}</h1>
+        <Link key={boss.id} to={`/bosses/${boss.id}`}>
+          <div key={boss.id}>
+            <h1>{boss.name}</h1>
 
-          <p>
-            {boss.locations.map((loc) => (
-              <span key={loc}>{loc} </span>
-            ))}
-          </p>
+            <p>
+              {boss.locations.map((loc) => (
+                <span key={loc}>{loc} </span>
+              ))}
+            </p>
 
-          <p>{boss.specialty}</p>
+            <p>{boss.specialty}</p>
 
-          <p>
-            {boss.drops.map((dropId) => {
-              const material = materials.find((mat) => mat.id === dropId);
+            <p>
+              {boss.drops.map((dropId) => {
+                const material = materials.find((mat) => mat.id === dropId);
 
-              return <span key={dropId}> {material?.name}</span>;
-            })}
-          </p>
-        </div>
+                return <span key={dropId}> {material?.name}</span>;
+              })}
+            </p>
+          </div>
+        </Link>
       ))}
     </div>
   );

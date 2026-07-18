@@ -1,6 +1,7 @@
 import { characters } from "../data/characters";
 import FilterGroup from "../components/filtering";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function CharacterList() {
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
@@ -71,12 +72,14 @@ export default function CharacterList() {
       )}
 
       {filteredCharacters.map((character) => (
-        <div key={character.name}>
-          <h2>{character.name}</h2>
-          <p>{character.region}</p>
-          <p>{character.element}</p>
-          <p>{character.weapon}</p>
-        </div>
+        <Link key={character.id} to={`/characters/${character.id}`}>
+          <div key={character.name} className="character-card">
+            <h2>{character.name}</h2>
+            <p>{character.region}</p>
+            <p>{character.element}</p>
+            <p>{character.weapon}</p>
+          </div>
+        </Link>
       ))}
     </div>
   );
