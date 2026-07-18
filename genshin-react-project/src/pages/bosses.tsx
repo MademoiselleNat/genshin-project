@@ -10,8 +10,7 @@ export default function Bosses() {
 
   const filteredBosses = bosses.filter((boss) => {
     const regionMatch =
-      selectedRegions.length === 0 ||
-      boss.locations.some((loc) => selectedRegions.includes(loc));
+      selectedRegions.length === 0 || selectedRegions.includes(boss.location);
     return regionMatch;
   });
   return (
@@ -32,11 +31,7 @@ export default function Bosses() {
           <div key={boss.id}>
             <h1>{boss.name}</h1>
 
-            <p>
-              {boss.locations.map((loc) => (
-                <span key={loc}>{loc} </span>
-              ))}
-            </p>
+            <p>{boss.location}</p>
 
             <p>{boss.specialty}</p>
 

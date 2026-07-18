@@ -17,7 +17,7 @@ export default function regionDetails() {
   );
 
   const regionBosses = bosses.filter((boss) =>
-    boss.locations.includes(region.name),
+    boss.location.includes(region.name),
   );
 
   return (

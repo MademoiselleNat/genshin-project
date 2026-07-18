@@ -1,7 +1,7 @@
 type Boss = {
     id: string,
     name: string,
-    locations: string[],
+    location: string,
     drops: string[]
     specialty: string
 }
@@ -10,23 +10,15 @@ export const bosses: Boss[] = [
     {
         id: "oceanid",
         name: "Oceanid",
-        locations: ["Liyue"],
+        location: "Liyue",
         drops: ["hydro-gem"],
         specialty: "Immune to hydro"
     },
 
     {
-        id: "hilichurl",
-        name: "Hilichurl",
-        locations: ["Mondstadt", "Liyue"],
-        drops: ["arrowhead", "mask"],
-        specialty: "Extremely easy to kill"
-    },
-
-    {
         id: "tartar",
         name: "Tartaglia",
-        locations: ["Liyue"],
+        location: "Liyue",
         drops: ["hydro-gem"],
         specialty: "is a weekly boss"
     },
@@ -34,7 +26,7 @@ export const bosses: Boss[] = [
     {
         id: "electro-cube",
         name: "Electro hypostasis",
-        locations: ["Mondstadt"],
+        location: "Mondstadt",
         drops: ["electro-gem"],
         specialty: "easy af stupid ass cube"
     },
@@ -42,7 +34,7 @@ export const bosses: Boss[] = [
     {
         id: "raiden",
         name: "Raiden Shogun",
-        locations: ["Inazuma"],
+        location: "Inazuma",
         drops: ["electro-gem"],
         specialty: "im scared of her"
     }

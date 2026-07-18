@@ -13,7 +13,7 @@ export default function BossDetails() {
   return (
     <div>
       <h1>{boss.name}</h1>
-      <p>Found here: {boss.locations}</p>
+      <p>Found here: {boss.location}</p>
       <p>Drops these: {boss.drops}</p>
     </div>
   );
