@@ -1,6 +1,7 @@
 import { materials } from "../data/materials";
 import { useState } from "react";
 import FilterGroup from "../components/filtering";
+import { Link } from "react-router-dom";
 
 export default function MaterialList() {
   const [showFilters, setShowFilters] = useState(false);
@@ -39,20 +40,22 @@ export default function MaterialList() {
         </div>
       )}
       {filteredMats.map((mat) => (
-        <div key={mat.id}>
-          <h1>{mat.name}</h1>
-          <p>
-            {mat.regions.map((region) => (
-              <span key={region}>{region} </span>
-            ))}
-          </p>
-          <p>{mat.category}</p>
-          <p>
-            {mat.source?.map((src) => (
-              <span key={src}>{src} </span>
-            ))}
-          </p>
-        </div>
+        <Link to={`/mats/${mat.id}`} key={mat.id}>
+          <div key={mat.id}>
+            <h1>{mat.name}</h1>
+            <p>
+              {mat.regions.map((region) => (
+                <span key={region}>{region} </span>
+              ))}
+            </p>
+            <p>{mat.category}</p>
+            <p>
+              {mat.source?.map((src) => (
+                <span key={src}>{src} </span>
+              ))}
+            </p>
+          </div>
+        </Link>
       ))}
     </div>
   );
