@@ -1,10 +1,32 @@
 import { bosses } from "../data/bosses";
 import { materials } from "../data/materials";
+import { useState } from "react";
+import FilterGroup from "../components/filtering";
 
 export default function Bosses() {
+  const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
+  const [showFilters, setShowFilters] = useState(false);
+
+  const filteredBosses = bosses.filter((boss) => {
+    const regionMatch =
+      selectedRegions.length === 0 ||
+      boss.locations.some((loc) => selectedRegions.includes(loc));
+    return regionMatch;
+  });
   return (
     <div>
-      {bosses.map((boss) => (
+      <button onClick={() => setShowFilters(!showFilters)}>Filters here</button>
+      {showFilters && (
+        <div className="filter-panel">
+          <FilterGroup
+            title="Regions"
+            selected={selectedRegions}
+            options={["Mondstadt", "Liyue", "Inazuma"]}
+            onChange={setSelectedRegions}
+          />
+        </div>
+      )}
+      {filteredBosses.map((boss) => (
         <div key={boss.id}>
           <h1>{boss.name}</h1>
 
